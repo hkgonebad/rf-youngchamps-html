@@ -1,0 +1,123 @@
+.js .slider-single>div:nth-child(1n+2) {
+    display: none
+}
+
+.js .slider-single.slick-initialized>div:nth-child(1n+2) {
+    display: block
+}
+
+.news{
+
+    .slider-single {
+        position: relative;
+        overflow: hidden;
+        height:auto;
+
+        .slick-arrow{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:after{
+                content: '';
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .slider-single img {
+        display: block;
+        max-width: 100%;
+        width: 100% !important;
+        height: auto;
+    }
+
+    .slider-single h3 {
+        position: relative;
+        left: 15px;
+        bottom: 30px;
+        margin: 0;
+        color: #FFF;
+        font-size: 14px;
+        font-weight: normal
+    }
+
+    .slider-single .slick-prev, .slider-single .slick-next {
+        position: absolute;
+        padding: 0;
+        display: flex;
+        color: #fff;
+        background-color: #ed3123;
+        width: 45px;
+        height: 45px;
+        line-height: 23px;
+        font-size: 0px;
+        overflow: hidden;
+        z-index: 9;
+    }
+
+
+    .slider-single .slick-prev::before,.slider-single .slick-next::before {
+        padding: 12px 13px;
+        color: #fff
+    }
+
+    .slider-single .slick-prev {
+        left: -5px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        &:after{
+            content: "\f104";
+        }
+    }
+
+    .slider-single .slick-next {
+        right: -5px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+
+        &:after{
+            content: "\f105";
+        } 
+    }
+
+    .slider-nav {
+        margin: 0;
+        padding: 0
+    }
+
+    .slider-nav .slick-slide {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        transition: all ease .5s
+    }
+
+    .slider-nav .slick-slide.is-active {
+        position: relative;
+        background-color: transparent
+    }
+
+    .slider-nav .slick-slide.is-active::before {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        content: "";
+        background-color: rgba(0,0,0,0.2)
+    }
+
+    .slider-nav .slick-slide img {
+        margin: 0 auto;
+        padding: 5px;
+        max-width: 100%;
+        height: auto
+    }
+}
